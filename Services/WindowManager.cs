@@ -10,43 +10,6 @@ namespace MVVM.Services
 {
     class WindowManager
     {
-        public List<Window> Windows { get; set; }
-
-        public WindowManager()
-        {
-            Windows = new List<Window>();
-        }
-
         
-        public void LoadWindow(string windowName)
-        {
-            object instance = Assembly.GetExecutingAssembly().CreateInstance(windowName);
-
-            if (instance is Window)
-            {
-                Window windowInstance = instance as Window;
-                windowInstance.ShowDialog();
-                Windows.Add(windowInstance);
-            }
-        }
-
-
-        public void LoadWindow(string windowName, Type assemblyType)
-        {
-            object instance = Assembly.GetAssembly(assemblyType).CreateInstance(windowName);
-
-            if (instance is Window)
-            {
-                Window windowInstance = instance as Window;
-                windowInstance.ShowDialog();
-                Windows.Add(windowInstance);
-            }
-        }
-
-
-        public void KillWindow(string windowName)
-        {
-            
-        }
     }
 }
