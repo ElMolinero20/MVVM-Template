@@ -46,14 +46,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumToBoolConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\RelayCommand.cs" />
     <Compile Include="Services\WindowManager.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Internationalization\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
