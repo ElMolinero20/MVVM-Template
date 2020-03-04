@@ -8,16 +8,25 @@ using System.Windows;
 
 namespace MVVM.Services.Controls
 {
-    class WindowManager
+    public class WindowManager
     {
+        /// <summary>
+        /// Holds all the windows to display.
+        /// </summary>
         public List<Window> Windows { get; set; }
 
+        /// <summary>
+        /// Initializations for the WindowManager
+        /// </summary>
         public WindowManager()
         {
             Windows = new List<Window>();
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="windowName"></param>
         public void LoadWindow(string windowName)
         {
             object instance = Assembly.GetExecutingAssembly().CreateInstance(windowName);
@@ -30,7 +39,11 @@ namespace MVVM.Services.Controls
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="windowName"></param>
+        /// <param name="assemblyType"></param>
         public void LoadWindow(string windowName, Type assemblyType)
         {
             object instance = Assembly.GetAssembly(assemblyType).CreateInstance(windowName);
@@ -43,7 +56,10 @@ namespace MVVM.Services.Controls
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="windowName"></param>
         public void KillWindow(string windowName)
         {
 
