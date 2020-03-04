@@ -40,7 +40,8 @@ namespace MVVM.Services
                 service = Assembly.GetExecutingAssembly().CreateInstance(serviceName);
                 if (service != null && service is IService)
                 {
-                    return service as IService;
+                    Cache.Register((IService)service);
+                    return Cache.GetService(serviceName);
                 }
                 else
                 {
