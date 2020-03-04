@@ -40,8 +40,7 @@ namespace MVVM.Services
         {
             if (Services.ContainsKey(serviceName))
             {
-                IService serviceInstance = Services[serviceName];
-                return serviceInstance;
+                return Services[serviceName];
             }
             return null;
         }
