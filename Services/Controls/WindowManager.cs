@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace MVVM.Services
+namespace MVVM.Services.Controls
 {
     class WindowManager
     {
@@ -17,7 +17,7 @@ namespace MVVM.Services
             Windows = new List<Window>();
         }
 
-        
+
         public void LoadWindow(string windowName)
         {
             object instance = Assembly.GetExecutingAssembly().CreateInstance(windowName);
@@ -46,7 +46,7 @@ namespace MVVM.Services
 
         public void KillWindow(string windowName)
         {
-            
+
         }
     }
 }

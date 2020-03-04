@@ -31,7 +31,9 @@ namespace MVVM.Converters
         {
             string parameterString = parameter as string;
             if (parameterString == null)
+            {
                 return DependencyProperty.UnsetValue;
+            }
 
             return Enum.Parse(targetType, parameterString);
         }
