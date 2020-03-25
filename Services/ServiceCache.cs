@@ -38,7 +38,10 @@ namespace MVVM.Services
             {
                 return Services[serviceName];
             }
-            return null;
+            else
+            {
+                return null;
+            }
         }
     }
 }
