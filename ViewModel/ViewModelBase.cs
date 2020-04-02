@@ -7,7 +7,7 @@ namespace MVVM.ViewModel
     public class ViewModelBase : INotifyPropertyChanged
     {
         /// <summary>
-        /// Implementation of the INotifyPropertyChanged interface.
+        /// Implementation of the <see cref="INotifyPropertyChanged"/> interface.
         /// It provides the PropertyChanged event which is fired when user controls are activated.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
