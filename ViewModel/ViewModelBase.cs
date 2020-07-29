@@ -16,9 +16,8 @@ namespace MVVM.ViewModel
         /// Fires the PropertyChanged.
         /// </summary>
         /// <param name="expression">Takes the lambda expression without parameters and returns the property.</param>
-        public void RaisePropertyChanged(Expression<Func<object>> expression)
+        public void RaisePropertyChanged(string propertyName)
         {
-            string propertyName = ((MemberExpression)expression.Body).Member.Name;
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
